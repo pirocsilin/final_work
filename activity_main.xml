@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/game">
+    <SeekBar
+        android:id="@+id/seek"
+        style="@android:style/Widget.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_seek"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="15dp"
+        android:max="100"
+        android:min="50"
+        android:progress="75" />
+    <Button
+        android:id="@+id/btn_seek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/seek"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#673AB7"
+        android:fontFamily="serif-monospace"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="onClick"
+        android:text="Продолжить" />
+    <ImageView
+        android:id="@+id/hero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/herro_png_2"
+        android:visibility="invisible" >
+    </ImageView>
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rules"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#673AB7"
+        android:fontFamily="serif-monospace"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:width="200dp"
+        android:visibility="invisible"
+        android:onClick="onClick"
+        android:text="ПОВТОРИТЬ ИГРУ" />
+    <Button
+        android:id="@+id/rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/results"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:width="200dp"
+        android:visibility="invisible"
+        android:onClick="onClick"
+        android:text="НА ГЛАВНУЮ" />
+    <Button
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:width="200dp"
+        android:visibility="invisible"
+        android:backgroundTint="#14D81C"
+        android:fontFamily="sans-serif-medium"
+        android:text="РЕЗУЛЬТАТЫ"
+        android:textColor="#000000"
+        android:onClick="onClick"
+        android:textSize="18sp" />
+</RelativeLayout>

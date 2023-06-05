@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/start">
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header_png"></ImageView>
+    <TextView
+        android:id="@+id/rules"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/header"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:textColor = "#ff6600"
+        android:layout_above="@id/start_game"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:textSize="18sp"
+        android:fontFamily="monospace"
+        android:text="ПРАВИЛА ИГРЫ: Игрок выбирает размер ячейки
+игрового поля, стартовую и финишную позиции персонажа в лабиринте.
+После чего есть 60 секунд, чтобы построить максимально сложный
+лабиринт. Оценка сложности - это количество ячеек пройденных
+персонажем от старта до финиша. Правила поиска пути выхода:
+Персонаж ищет путь, начиная с правой ячейки от себя (на 3 часа)
+по часовой стрелке. Если найден не пройденный путь - движется туда,
+если упирается в тупик или пройденный путь - движется в обратном
+направлении в поиске не пройденного пути. Перемещение из одной
+ячейки в другую - это одно очко для игрока. Если построен лабиринт
+без выхода - игра проиграна!"/>
+    <Button
+        android:id="@+id/start_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/results"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:width="200dp"
+        android:backgroundTint="#673AB7"
+        android:fontFamily="serif-monospace"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="onClick"
+        android:text="НАЧАТЬ ИГРУ"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:width="200dp"
+        android:backgroundTint="#FF9800"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:onClick="onClick"
+        android:text="РЕЗУЛЬТАТЫ" />
+</RelativeLayout>
